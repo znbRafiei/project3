@@ -35,7 +35,7 @@ class WeightConversionView(APIView):
                     converted_value = value
 
                 return Response(
-                    {"converted_value": converted_value}, status=status.HTTP_200_OK
+                    {converted_value}, status=status.HTTP_200_OK
                 )
 
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
